@@ -21,7 +21,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "generate": "plop --plopfile ./generators/plopfile.js"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -42,11 +43,26 @@
     "@babel/core": "^7.10.5",
     "@storybook/addon-actions": "^6.0.0-rc.15",
     "@storybook/addon-essentials": "^6.0.0-rc.15",
+    "@storybook/addon-toolbars": "^6.0.0-rc.15",
     "@storybook/addon-links": "^6.0.0-rc.15",
     "@storybook/node-logger": "^6.0.0-rc.15",
     "@storybook/preset-create-react-app": "^3.1.4",
     "@storybook/react": "^6.0.0-rc.15",
     "babel-loader": "^8.1.0",
-    "react-is": "^16.13.1"
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
+    "plop": "^2.7.1",
+    "prettier": "^2.0.5",
+    "react-is": "^16.13.1",
+    "storybook-addon-designs": "^5.4.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": "eslint --cache --fix",
+    "*.{js,jsx,ts,tsx,css,md}": "prettier --write"
   }
 }
