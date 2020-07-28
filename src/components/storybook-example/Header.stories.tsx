@@ -1,6 +1,6 @@
 import React from "react";
 import { Header, HeaderProps } from "./Header";
-import { Args } from "../types";
+import { Args } from "../../types";
 
 export default {
   title: "Example/Header",

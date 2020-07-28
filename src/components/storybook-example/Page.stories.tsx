@@ -1,7 +1,7 @@
 import React from "react";
 import { Page, PageProps } from "./Page";
 import * as HeaderStories from "./Header.stories";
-import { Args } from "../types";
+import { Args } from "../../types";
 
 export default {
   title: "Example/Page",

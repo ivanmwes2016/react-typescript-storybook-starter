@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, ButtonProps } from "./Button";
-import { Args } from "../types";
+import { Args } from "../../types";
 
 export default {
   title: "Example/Button",
