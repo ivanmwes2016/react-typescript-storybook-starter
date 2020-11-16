@@ -1,6 +1,7 @@
 import React from "react";
 import { Button, ButtonProps } from "./Button";
 import { Args } from "../../types";
+import { Story } from "@storybook/react/types-6-0";
 
 export default {
   title: "Example/Button",
@@ -10,27 +11,29 @@ export default {
   },
 };
 
-const Template = (args: Args & ButtonProps) => <Button {...args} />;
+const Template: Story<ButtonProps> = (args: Args & ButtonProps) => (
+  <Button {...args} />
+);
 
 export const Primary = Template.bind({});
-(Primary as any).args = {
+Primary.args = {
   primary: true,
   label: "Button",
 };
 
 export const Secondary = Template.bind({});
-(Secondary as any).args = {
+Secondary.args = {
   label: "Button",
 };
 
 export const Large = Template.bind({});
-(Large as any).args = {
+Large.args = {
   size: "large",
   label: "Button",
 };
 
 export const Small = Template.bind({});
-(Small as any).args = {
+Small.args = {
   size: "small",
   label: "Button",
 };

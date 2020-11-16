@@ -1,5 +1,6 @@
 import React from "react";
 import { withDesign } from "storybook-addon-designs";
+import { Story } from "@storybook/react/types-6-0";
 import { Button, ButtonProps } from "./Button";
 import { Args } from "../types";
 
@@ -10,7 +11,7 @@ export default {
   argTypes: {},
 };
 
-const Story = (args: Args & ButtonProps) => {
+const Template: Story<ButtonProps> = (args: Args) => {
   return (
     <div>
       <p>
@@ -28,7 +29,7 @@ const Story = (args: Args & ButtonProps) => {
   );
 };
 
-export const Basic = Story.bind({});
-(Basic as any).args = {
+export const Basic = Template.bind({});
+Basic.args = {
   label: "Button",
 };
