@@ -1,5 +1,12 @@
 import React from "react";
-import { action } from "@storybook/addon-actions";
+import styled from "styled-components";
+
+const StyledButton = styled.button`
+  background-color: #5850ec;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+`;
 
 export interface ButtonProps {
   label?: string;
@@ -7,5 +14,5 @@ export interface ButtonProps {
 }
 
 export const Button: React.FC<ButtonProps> = (props) => {
-  return <button onClick={action("onClick")}>{props.label}</button>;
+  return <StyledButton onClick={props.onClick}>{props.label}</StyledButton>;
 };
