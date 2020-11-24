@@ -1,19 +1,26 @@
-import React from 'react';
-import { withDesign } from 'storybook-addon-designs';
-import { {{pascalCase name}} } from './{{pascalCase name}}';
+import React from "react";
+import { withDesign } from "storybook-addon-designs";
+import { Story } from "@storybook/react/types-6-0";
+import { {{pascalCase name}}, {{pascalCase name}}Props } from "./{{pascalCase name}}";
 
 export default {
-  title: 'Component/{{pascalCase name}}',
+  title: "Component/{{pascalCase name}}",
   component: {{pascalCase name}},
   decorators: [withDesign],
   argTypes: {},
 };
 
-const Story = (args) => <{{pascalCase name}} {...args} />;
+const Template: Story<{{pascalCase name}}Props> = (args) => {
+  return (
+    <div>
+      <{{pascalCase name}} {...args} />
+    </div>
+  );
+};
 
-export const Basic = Story.bind({});
+export const Basic = Template.bind({});
 Basic.args = {
-  label: '{{pascalCase name}}',
+  label: "{{pascalCase name}}",
 };
 
 {{#if imageUrl}}
