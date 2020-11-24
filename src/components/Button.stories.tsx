@@ -2,7 +2,6 @@ import React from "react";
 import { withDesign } from "storybook-addon-designs";
 import { Story } from "@storybook/react/types-6-0";
 import { Button, ButtonProps } from "./Button";
-import { Args } from "../types";
 
 export default {
   title: "Component/Button",
@@ -11,7 +10,7 @@ export default {
   argTypes: {},
 };
 
-const Template: Story<ButtonProps> = (args: Args) => {
+const Template: Story<ButtonProps> = (args) => {
   return (
     <div>
       <p>

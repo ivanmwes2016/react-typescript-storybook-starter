@@ -1,6 +1,5 @@
 import React from "react";
 import { Button, ButtonProps } from "./Button";
-import { Args } from "../../types";
 import { Story } from "@storybook/react/types-6-0";
 
 export default {
@@ -11,9 +10,7 @@ export default {
   },
 };
 
-const Template: Story<ButtonProps> = (args: Args & ButtonProps) => (
-  <Button {...args} />
-);
+const Template: Story<ButtonProps> = (args) => <Button {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
