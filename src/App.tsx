@@ -1,7 +1,6 @@
 import React from "react";
-import "./App.css";
 
-function App() {
+const App: React.FC<{}> = () => {
   return (
     <div
       style={{
@@ -19,6 +18,6 @@ function App() {
       </p>
     </div>
   );
-}
+};
 
 export default App;
