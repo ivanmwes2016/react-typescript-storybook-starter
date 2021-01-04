@@ -8,6 +8,14 @@ export default {
   component: {{pascalCase name}},
   decorators: [withDesign],
   argTypes: {},
+  {{#if imageUrl}}
+  parameters: {
+    design: {
+      type: '{{imageType}}',
+      url: '{{imageUrl}}',
+    },
+  },
+  {{/if}}
 };
 
 const Template: Story<{{pascalCase name}}Props> = (args) => {
@@ -22,14 +30,3 @@ export const Basic = Template.bind({});
 Basic.args = {
   label: "{{pascalCase name}}",
 };
-
-{{#if imageUrl}}
-Basic.story = {
-  parameters: {
-    design: {
-      type: '{{imageType}}',
-      url: '{{imageUrl}}',
-    },
-  },
-};
-{{/if}}
