@@ -44,7 +44,9 @@
     "storybook-addon-designs": "^5.4.2"
   },
   "eslintConfig": {
-    "extends": ["react-app"],
+    "extends": [
+      "react-app"
+    ],
     "rules": {
       "import/no-anonymous-default-export": "off"
     }

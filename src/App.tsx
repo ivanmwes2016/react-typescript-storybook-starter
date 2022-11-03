@@ -1,21 +1,16 @@
 import React from "react";
+import { Profile } from "./components/profile/Profile";
+import "../src/global.css";
 
 const App: React.FC<{}> = () => {
   return (
-    <div
-      style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        height: "100vh",
-        fontSize: "2rem",
-      }}
-    >
-      <p style={{ maxWidth: "70%" }}>
-        Please use <a href="https://storybook.js.org/">Storybook</a> to create
-        your components. It has already been set up for you with an example in
-        the `src/components` folder.
-      </p>
+    <div id="main">
+      <Profile
+        name="Alina Smith"
+        description="Hi, I'm Alina. I’m a UX/UI web and mobile designer with over 6 years of exp. in helping brands make it big. "
+        buttonLabel="Hire Me"
+        imageUrl=""
+      />
     </div>
   );
 };

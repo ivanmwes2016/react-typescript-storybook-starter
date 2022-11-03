@@ -2,14 +2,17 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledButton = styled.button`
-  background-color: #5850ec;
+  background-color: #fe805c;
   color: white;
   padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
+  border-radius: 24px;
+  border: none;
+  width: 142px;
+  height: 40px;
 `;
 
 export interface ButtonProps {
-  label?: string;
+  label: string;
   onClick?: () => void;
 }
 
