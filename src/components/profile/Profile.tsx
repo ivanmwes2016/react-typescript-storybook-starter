@@ -87,7 +87,7 @@ export const Profile = ({
 }: iProfile) => {
   return (
     <StyledProfile backgroundImage={imageUrl}>
-      <div className="profilePic"></div>
+      <div className="profilePic" />
       <div className="info">
         <p className="name">{name}</p>
         <p>{description}</p>
